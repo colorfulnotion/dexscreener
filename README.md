@@ -165,6 +165,38 @@ If someone actually has 2-pool or 4-pool tokens we map them as follows:
 HydraDX Examples:
 * _Matthias to provide HydraDX extrinsicIDs for us to map into JSON "events" of all swap cases as well as liquidity cases_
 
+#### Example 1
+
+https://hydradx.subscan.io/extrinsic/5081726-2
+
+Should ingest as: 450.391786 USDT -> 0.15 WETH
+
+#### Example 2
+
+https://hydradx.subscan.io/extrinsic/5081141-2
+
+Should ingest as: 500 USDT -> 0.00808666 WBTC
+
+#### Example 3
+
+https://hydradx.subscan.io/extrinsic/5080488-0
+	
+80.9981538781 vDOT > 51616.002281331759 HDX
+
+#### Example 4
+
+https://hydradx.subscan.io/extrinsic/4589219-2?event=4589219-13
+
+Should show: 10799.9040616235 INTR -> 772.6816006249018 4-Pool (force mapped to USDT*)
+
+Comment: in this case the user really wanted to own 4-pool.
+
+#### Example 5
+
+https://hydradx.subscan.io/extrinsic/4705161-3?event=4705161-37
+
+Should show: 8899.9696696365 INTR -> 38.8922321335 vDOT
+
 
 ### Key Events for AssetHub
 
