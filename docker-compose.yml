@@ -1,0 +1,15 @@
+version: '3.3'
+services:
+  db:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_DATABASE: blocks_db
+    volumes: 
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+  app:
+    build: .
+    depends_on:
+      - db
+    ports:
+      - "3000:3000"
